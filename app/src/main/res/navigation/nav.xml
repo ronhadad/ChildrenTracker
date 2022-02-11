@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/isUserLogedFragment">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.loginregister.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_firstPage2"
+            app:destination="@id/firstPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.loginregister.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPage2"
+        android:name="com.example.loginregister.FirstPage"
+        android:label="fragment_first_page"
+        tools:layout="@layout/fragment_first_page">
+        <action
+            android:id="@+id/action_firstPage2_to_children"
+            app:destination="@id/children" />
+        <action
+            android:id="@+id/action_firstPage2_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_firstPage2_to_creatRedZone"
+            app:destination="@id/creatRedZone" />
+    </fragment>
+    <fragment
+        android:id="@+id/children"
+        android:name="com.example.loginregister.Children"
+        android:label="fragment_children"
+        tools:layout="@layout/fragment_children" >
+        <action
+            android:id="@+id/action_children_to_firstPage2"
+            app:destination="@id/firstPage2" />
+        <action
+            android:id="@+id/action_children_to_redZone2"
+            app:destination="@id/redZone" />
+    </fragment>
+    <fragment
+        android:id="@+id/creatRedZone"
+        android:name="com.example.loginregister.CreateRedZone"
+        android:label="fragment_red_zone"
+        tools:layout="@layout/fragment_create_red_zone">
+        <action
+            android:id="@+id/action_creatRedZone_to_redZone"
+            app:destination="@id/redZone" />
+    </fragment>
+    <fragment
+        android:id="@+id/isUserLogedFragment"
+        android:name="com.example.loginregister.isUserLogedFragment"
+        android:label="fragment_is_user_loged"
+        tools:layout="@layout/fragment_is_user_loged">
+        <action
+            android:id="@+id/action_isUserLogedFragment_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_isUserLogedFragment_to_firstPage2"
+            app:destination="@id/firstPage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/redZone"
+        android:name="com.example.loginregister.RedZone"
+        android:label="fragment_red_zone"
+        tools:layout="@layout/fragment_red_zone" >
+        <action
+            android:id="@+id/action_redZone_to_children"
+            app:destination="@id/children" />
+        <action
+            android:id="@+id/action_redZone_to_creatRedZone"
+            app:destination="@id/creatRedZone" />
+    </fragment>
+</navigation>
