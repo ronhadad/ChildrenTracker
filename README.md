@@ -1,6 +1,6 @@
 # ChildrenTracker
 <p align="center">
-  <img src="https://www.kinorot.com/wp-content/uploads/2016/12/kinneret-680x350.jpg">
+  <img src="https://github.com/ronhadad/ChildrenTracker/blob/main/icon.png">
 </p>
 
 ## Main Purpose
